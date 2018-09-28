@@ -6,15 +6,15 @@
     android:id="@+id/backIV"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginTop="@dimen/space15"
-    android:layout_marginLeft="@dimen/space15"
+    android:layout_marginTop="@dimen/space10"
+    android:layout_marginLeft="@dimen/space10"
     android:src="@drawable/selector_home_btn" />
 
   <ImageView
     android:id="@+id/frontIV"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="@dimen/space15"
+    android:layout_marginLeft="@dimen/space10"
     android:layout_gravity="center_vertical"
     android:src="@drawable/selector_home_back" />
 
@@ -22,7 +22,7 @@
     android:id="@+id/afterIV"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginRight="@dimen/space15"
+    android:layout_marginRight="@dimen/space10"
     android:layout_gravity="center_vertical|right"
     android:src="@drawable/selector_home_front" />
 
@@ -30,8 +30,8 @@
     android:id="@+id/exitIV"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginTop="@dimen/space15"
-    android:layout_marginRight="@dimen/space15"
+    android:layout_marginTop="@dimen/space10"
+    android:layout_marginRight="@dimen/space10"
     android:layout_gravity="right"
     android:src="@drawable/selector_home_exit" />
 

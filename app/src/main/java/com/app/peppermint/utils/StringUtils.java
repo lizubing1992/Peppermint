@@ -1,6 +1,3 @@
-/*
- * All rights Reserved, Designed By 农金圈  2018年04月26日16:37
- */
 package com.app.peppermint.utils;
 
 import android.app.ActivityManager;

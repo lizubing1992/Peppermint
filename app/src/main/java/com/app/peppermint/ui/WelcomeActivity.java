@@ -1,12 +1,10 @@
 package com.app.peppermint.ui;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
 import com.app.peppermint.R;
 import com.app.peppermint.base.BaseActivity;
-import com.app.peppermint.utils.LogUtils;
+import com.app.peppermint.ui.activity.MainActivity;
 
 public class WelcomeActivity extends BaseActivity {
 
@@ -22,6 +20,7 @@ public class WelcomeActivity extends BaseActivity {
       @Override
       public void run() {
         startActivity(new Intent(mContext, MainActivity.class));
+        finish();
       }
     }, 3000);
   }

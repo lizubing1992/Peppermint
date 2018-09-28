@@ -1,4 +1,4 @@
-package com.app.peppermint.ui;
+package com.app.peppermint.base;
 
 import android.os.Bundle;
 import android.view.View;
@@ -6,6 +6,7 @@ import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import com.app.peppermint.R;
 import com.app.peppermint.base.BaseActivity;
+import com.app.peppermint.ui.fragment.ExitDialogFragment;
 
 public class BaseBgActivity extends BaseActivity {
 
@@ -69,7 +70,7 @@ public class BaseBgActivity extends BaseActivity {
   }
 
   protected void exitClick() {
-
+    new ExitDialogFragment().show(getSupportFragmentManager(),"exit");
   }
 
   protected void backClick() {

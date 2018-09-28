@@ -6,4 +6,5 @@
     <!--白色 -->
     <color name="white">#ffffff</color>
     <color name="toast_bg_color">#d0576B95</color>
+    <color name="transparent">#00000000</color>
 </resources>

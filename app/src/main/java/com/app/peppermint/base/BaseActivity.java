@@ -42,14 +42,10 @@ public abstract class BaseActivity extends AppCompatActivity implements
   }
 
   protected void initView(Bundle savedInstanceState) {
-
   }
-
 
   protected void initRxBus() {
-
   }
-
 
   /**
    * xml文件id
@@ -72,60 +68,8 @@ public abstract class BaseActivity extends AppCompatActivity implements
     mHandler.setHandler(this);
   }
 
-  protected void setOnItemClickListener() {
-
-  }
-
-
-  /**
-   * 是否使用fragment
-   *
-   * @return 默认使用
-   */
-  public boolean useFragment() {
-    return true;
-  }
-
-
-  /**
-   * 刷新数据
-   */
-  protected void refreshData() {
-
-  }
-
-
-  @Override
-  public boolean onKeyDown(int keyCode, KeyEvent event) {
-    if (keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_DOWN) {
-      finishActivity();
-      return true;
-    }
-    return super.onKeyDown(keyCode, event);
-  }
-
-  /**
-   * @return 返回false则不显示返回navigation icon
-   */
-  protected boolean isCanBack() {
-    return true;
-  }
-
-
-  protected void finishActivity() {
-    finish();
-  }
-
   protected void setListener() {
   }
-
-  /**
-   * 依赖注入的入口
-   */
-  protected void componentInject() {
-    initHandler();
-  }
-
 
   /**
    * handler接受message
@@ -135,24 +79,9 @@ public abstract class BaseActivity extends AppCompatActivity implements
 
   }
 
-
   @Override
   protected void onDestroy() {
     super.onDestroy();
     AppManager.getAppManager().finishActivity(this);
-  }
-
-
-  @Override
-  public void onBackPressed() {
-    super.onBackPressed();
-  }
-
-  public void changButtomBarColor(int color) {
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-      getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
-      getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-      getWindow().setNavigationBarColor(getResources().getColor(color));
-    }
   }
 }
