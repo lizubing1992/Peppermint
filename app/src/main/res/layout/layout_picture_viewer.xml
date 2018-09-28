@@ -5,4 +5,11 @@
     android:id="@+id/imageIV"
     android:layout_width="match_parent"
     android:layout_height="match_parent" />
+  <ImageView
+      android:id="@+id/imageTipIV"
+      android:layout_gravity="right|bottom"
+      android:layout_marginBottom="@dimen/space50"
+      android:layout_marginRight="@dimen/space80"
+      android:layout_width="340dp"
+      android:layout_height="42dp" />
 </FrameLayout>

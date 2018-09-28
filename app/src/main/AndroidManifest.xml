@@ -27,8 +27,8 @@
       android:enabled="true"
       android:exported="true"
       android:name=".service.PlayService" />
-
-    <activity android:name=".ui.activity.ImageDetailActivity"></activity>
+    <activity android:name=".ui.activity.ImageDetailActivity"
+        android:screenOrientation="landscape"/>
   </application>
 
 </manifest>

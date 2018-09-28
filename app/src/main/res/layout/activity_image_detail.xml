@@ -10,5 +10,13 @@
     android:overScrollMode="never"
     android:scrollbars="none"
     android:layout_height="match_parent"/>
+  <android.support.v4.view.ViewPager
+      android:visibility="gone"
+      android:id="@+id/viewPagerTip"
+      android:layout_width="match_parent"
+      android:overScrollMode="never"
+      android:scrollbars="none"
+      android:layout_height="match_parent"/>
+
   <include layout="@layout/fl_base"/>
 </FrameLayout>

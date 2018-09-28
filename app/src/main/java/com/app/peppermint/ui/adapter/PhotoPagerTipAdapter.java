@@ -7,9 +7,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.ImageView;
+
 import com.app.peppermint.R;
+import com.app.peppermint.entity.PhotoExtendEntity;
 import com.app.peppermint.entity.PhotoItemEntity;
-import com.app.peppermint.utils.LogUtils;
 import com.bumptech.glide.Glide;
 
 import java.util.List;
@@ -19,17 +20,17 @@ import java.util.List;
  *
  * @author: lizubing
  */
-public class PhotoPagerAdapter extends PagerAdapter {
+public class PhotoPagerTipAdapter extends PagerAdapter {
 
   private LayoutInflater mInflater;
-  private List<PhotoItemEntity> dataList;
+  private List<PhotoExtendEntity> dataList;
   private ImageTipsClick imageTipsClick;
 
   public void setImageTipsClick(ImageTipsClick imageTipsClick) {
     this.imageTipsClick = imageTipsClick;
   }
 
-  public PhotoPagerAdapter(List<PhotoItemEntity> dataList) {
+  public PhotoPagerTipAdapter(List<PhotoExtendEntity> dataList) {
     this.dataList = dataList;
   }
 
@@ -52,7 +53,7 @@ public class PhotoPagerAdapter extends PagerAdapter {
     View view =  LayoutInflater.from(container.getContext()).inflate(R.layout.layout_picture_viewer, null);
     ImageView imageView = (ImageView) view.findViewById(R.id.imageIV);
     ImageView imageTipIV = (ImageView) view.findViewById(R.id.imageTipIV);
-    final PhotoItemEntity entity = dataList.get(position);
+    final PhotoExtendEntity entity = dataList.get(position);
     imageView.setImageResource(entity.getUrlId());
     if(entity.getTipId() != null && entity.getTipId() != 0){
       Glide.with(container.getContext()).load(entity.getTipId()).into(imageTipIV);
@@ -80,7 +81,7 @@ public class PhotoPagerAdapter extends PagerAdapter {
   }
 
   public interface ImageTipsClick{
-    void tipClickListener(PhotoItemEntity entity,int position);
+    void tipClickListener(PhotoExtendEntity entity, int position);
   }
 
 }

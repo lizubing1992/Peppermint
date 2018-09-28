@@ -34,9 +34,9 @@ public abstract class BaseActivity extends AppCompatActivity implements
     initHandler();
     //初始化页面控件
     initView(savedInstanceState);
-    setListener();
     //加载数据
     loadData();
+    setListener();
     initRxBus();
     AppManager.getAppManager().addActivity(this);
   }

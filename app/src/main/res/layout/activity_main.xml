@@ -11,22 +11,30 @@
 
   <FrameLayout
     android:layout_width="match_parent"
-    android:layout_marginLeft="@dimen/space50"
-    android:layout_marginTop="@dimen/space25"
-    android:layout_marginBottom="@dimen/space25"
-    android:layout_marginRight="@dimen/space50"
+    android:layout_marginLeft="@dimen/space70"
+    android:layout_marginTop="@dimen/space50"
+    android:layout_marginBottom="@dimen/space50"
+    android:layout_marginRight="@dimen/space70"
     android:layout_height="match_parent">
     <ImageView
       android:id="@+id/menu1IV"
       android:layout_width="wrap_content"
-      android:layout_marginLeft="@dimen/space30"
-      android:layout_marginTop="@dimen/space30"
+      android:layout_marginLeft="@dimen/space60"
+      android:layout_marginTop="@dimen/space60"
       android:layout_height="wrap_content"
       android:background="@drawable/menu_1" />
 
     <ImageView
+        android:id="@+id/menu2IV"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="@dimen/space60"
+        android:layout_marginTop="@dimen/space60"
+        android:layout_height="wrap_content"
+        android:background="@drawable/menu_2" />
+
+    <ImageView
       android:layout_width="wrap_content"
-      android:layout_marginLeft="@dimen/space15"
+      android:layout_marginLeft="@dimen/space40"
       android:layout_marginBottom="@dimen/space50"
       android:layout_gravity="bottom"
       android:layout_height="wrap_content"

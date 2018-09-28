@@ -25,6 +25,10 @@ public class MainActivity extends BaseBgActivity {
   protected void initView(Bundle savedInstanceState) {
     super.initView(savedInstanceState);
     menu1IV = findViewById(R.id.menu1IV);
+    frontIV.setSelected(false);
+    afterIV.setSelected(false);
+    exitIV.setSelected(true);
+    backIV.setSelected(false);
   }
 
   @Override
