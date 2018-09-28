@@ -3,4 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <!--白色 -->
+    <color name="white">#ffffff</color>
+    <color name="toast_bg_color">#d0576B95</color>
 </resources>
