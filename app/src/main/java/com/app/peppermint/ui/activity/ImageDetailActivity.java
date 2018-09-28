@@ -66,7 +66,7 @@ public class ImageDetailActivity extends BaseBgActivity {
   @Override
   protected void backClick() {
     super.backClick();
-
+    finish();
   }
 
 
