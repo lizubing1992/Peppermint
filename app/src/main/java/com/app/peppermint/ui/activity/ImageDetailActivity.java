@@ -40,6 +40,7 @@ public class ImageDetailActivity extends BaseBgActivity {
     @Override
     protected void loadData() {
         super.loadData();
+
         ArrayList<PhotoItemEntity> list = new ArrayList<>();
         list.add(new PhotoItemEntity(R.drawable.legend_01));
         //特殊处理第二个 冥王是谁，点击
