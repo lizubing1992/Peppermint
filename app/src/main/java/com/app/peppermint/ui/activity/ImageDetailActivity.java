@@ -10,7 +10,6 @@ import com.app.peppermint.entity.PhotoExtendEntity;
 import com.app.peppermint.entity.PhotoItemEntity;
 import com.app.peppermint.ui.adapter.PhotoPagerAdapter;
 import com.app.peppermint.ui.adapter.PhotoPagerTipAdapter;
-import com.app.peppermint.utils.LogUtils;
 
 import java.util.ArrayList;
 
@@ -94,7 +93,7 @@ public class ImageDetailActivity extends BaseBgActivity {
 
             @Override
             public void onPageSelected(int position) {
-                processPageSelected(position);
+                processPageSelected(position,pagerAdapter.getCount());
             }
 
             @Override
@@ -126,7 +125,7 @@ public class ImageDetailActivity extends BaseBgActivity {
                         viewPagerTip.setVisibility(View.GONE);
                         viewPager.setVisibility(View.VISIBLE);
                         processExitAndBackEnable(true);
-                        processPageSelected(viewPager.getCurrentItem());
+                        processPageSelected(viewPager.getCurrentItem(),pagerAdapter.getCount());
                     }
                 });
             }
@@ -139,7 +138,7 @@ public class ImageDetailActivity extends BaseBgActivity {
 
             @Override
             public void onPageSelected(int position) {
-                processPageSelected(position);
+                processPageSelected(position,tipAdapter.getCount());
             }
 
             @Override
@@ -157,11 +156,11 @@ public class ImageDetailActivity extends BaseBgActivity {
         backIV.setSelected(enable);
     }
 
-    private void processPageSelected(int position) {
+    private void processPageSelected(int position,int count) {
         if (position == 0) {
             frontIV.setSelected(false);
             afterIV.setSelected(true);
-        } else if (position == pagerAdapter.getCount() - 1) {
+        } else if (position == count - 1) {
             frontIV.setSelected(true);
             afterIV.setSelected(false);
         } else {
